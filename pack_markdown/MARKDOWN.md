@@ -22,14 +22,14 @@
 1) id (айдишник таблицы, настроен по умолчанию, int)
 2) last_name (фамилия, text)
 3) phone_number (номер телефона, int)
-![](pack_markdown/scrin/coachs(a).png)
-![](pack_markdown/scrin/coachs(b).png)
+![](scrin/coachs(a).png)
+![](scrin/coachs(b).png)
 
     GYM_CLASSES.Имеет стобцы:
 1) id (айдишник таблицы, настроен по умолчанию, int)
 2) number (номер спортзала, int)
-![](pack_markdown/scrin/gym_classes(a).png)
-![](pack_markdown/scrin/gym_classes(b).png)
+![](scrin/gym_classes(a).png)
+![](scrin/gym_classes(b).png)
 
     SEASON_TICKETS. Имеет стобцы:
 1) id (айдишник таблицы, настроен по умолчанию, int)
@@ -39,16 +39,16 @@
 5) amount (количество абониментов, int)
 6) name_of_season_ticket (названия абониментов, text)
 7) id_gym_class (айди таблицы gym_classes, int)
-![](pack_markdown/scrin/season_tickets(a).png)
-![](pack_markdown/scrin/season_tickets(b).png)
+![](scrin/season_tickets(a).png)
+![](scrin/season_tickets(b).png)
 
    UCHET. Имеет стобцы:
 1) id (айдишник таблицы, настроен по умолчанию, int)
 2) month (название месяца, text)
 3) payment (оплата по абонементу, int)
 4) id_season_ticket (айди таблицы gym_class, int)
-![](pack_markdown/scrin/uchet(a).png)
-![](pack_markdown/scrin/uchet(b).png)
+![](scrin/uchet(a).png)
+![](scrin/uchet(b).png)
 
 
 
