@@ -15,6 +15,8 @@
 4) phone_number (номер телефона, int)
 5) id_coach (айди таблицы coachs, int)
 6) id_uchet (айди таблицы uchet, int)
+
+   
    ![](scrin/clients(a).png)
    ![](scrin/clients(b).png)
 
@@ -22,12 +24,16 @@
 1) id (айдишник таблицы, настроен по умолчанию, int)
 2) last_name (фамилия, text)
 3) phone_number (номер телефона, int)
+
+   
 ![](scrin/coachs(a).png)
 ![](scrin/coachs(b).png)
 
     GYM_CLASSES.Имеет стобцы:
 1) id (айдишник таблицы, настроен по умолчанию, int)
 2) number (номер спортзала, int)
+
+   
 ![](scrin/gym_classes(a).png)
 ![](scrin/gym_classes(b).png)
 
@@ -39,6 +45,8 @@
 5) amount (количество абониментов, int)
 6) name_of_season_ticket (названия абониментов, text)
 7) id_gym_class (айди таблицы gym_classes, int)
+
+   
 ![](scrin/season_tickets(a).png)
 ![](scrin/season_tickets(b).png)
 
@@ -47,6 +55,8 @@
 2) month (название месяца, text)
 3) payment (оплата по абонементу, int)
 4) id_season_ticket (айди таблицы gym_class, int)
+
+   
 ![](scrin/uchet(a).png)
 ![](scrin/uchet(b).png)
 
