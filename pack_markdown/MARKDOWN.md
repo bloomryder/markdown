@@ -15,8 +15,8 @@
 4) phone_number (номер телефона, int)
 5) id_coach (айди таблицы coachs, int)
 6) id_uchet (айди таблицы uchet, int)
-![](pack_markdown/scrin/clients(a).png)
-![](pack_markdown/scrin/clients(b).png)
+   ![](pack_markdown/scrin/clients(a).png)
+   ![](pack_markdown/scrin/clients(b).png)
 
     COACHS. Имеет стобцы:
 1) id (айдишник таблицы, настроен по умолчанию, int)
