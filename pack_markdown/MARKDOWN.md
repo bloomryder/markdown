@@ -29,7 +29,7 @@
 ![](scrin/coachs(a).png)
 ![](scrin/coachs(b).png)
 
-    GYM_CLASSES.Имеет стобцы:
+    GYM_CLASSES. Имеет стобцы:
 1) id (айдишник таблицы, настроен по умолчанию, int)
 2) number (номер спортзала, int)
 
