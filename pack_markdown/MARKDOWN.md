@@ -15,6 +15,8 @@
 4) phone_number (номер телефона, int)
 5) id_coach (айди таблицы coachs, int)
 6) id_uchet (айди таблицы uchet, int)
+
+   
 ![](scrin/clients(a).png)
 ![](scrin/clients(b).png)
 
@@ -22,12 +24,16 @@
 1) id (айдишник таблицы, настроен по умолчанию, int)
 2) last_name (фамилия, text)
 3) phone_number (номер телефона, int)
+
+   
 ![](scrin/coachs(a).png)
 ![](scrin/coachs(b).png)
 
 ###    GYM_CLASSES.Имеет стобцы:
 1) id (айдишник таблицы, настроен по умолчанию, int)
 2) number (номер спортзала, int)
+
+   
 ![](scrin/gym_classes(a).png)
 ![](scrin/gym_classes(b).png)
 
@@ -39,6 +45,8 @@
 5) amount (количество абониментов, int)
 6) name_of_season_ticket (названия абониментов, text)
 7) id_gym_class (айди таблицы gym_classes, int)
+
+   
 ![](scrin/season_tickets(a).png)
 ![](scrin/season_tickets(b).png)
 
@@ -47,57 +55,70 @@
 2) month (название месяца, text)
 3) payment (оплата по абонементу, int)
 4) id_season_ticket (айди таблицы gym_class, int)
+
+   
 ![](scrin/uchet(a).png)
 ![](scrin/uchet(b).png)
 
 ## 3. UNION
  Обьединение наборов строк
 обьединил строки last_name из таблиц clients, coachs
-![](scrin/union.png)
+
+
+![](operation/union.png)
 
 ### 4. ORDER BY
  Сортировка
 Упорядочение по столбцу last_name
-![](scrin/orderby.png)
 
+![](operation/orderby.png)
 ### 5. HAVING 
  Фильтрация запросов
 Отфильтровал таблицу по avg_price 
-![](scrin/having.png)
+
+![](operation/having.png)
 
 ### 6. SELECT (Вложенный запрос)
  Вывод с вложенным запросом в WHERE 
 Вывод результата с именем "артем"
-![](scrin/select1.png)
+
+![](operation/select1.png)
 
 Вывод номера телефона, где имя равно "василий"
-![](scrin/select2.png)
+
+![](operation/select2.png)
 
 вывод цены > 15.000 с описанием абонемента
-![](scrin/select3.png)
+
+![](operation/select3.png)
 
 ### 7.1. АГРЕГАТНЫЕ ФУНКЦИИ 
  Математические функции 
 
 Вывод максимальной цены из таблицы учета
-![](scrin/agr1.png)
+
+![](operation/agr1.png)
 
 Вывод самого длинного номера телефона и количество клиентов 
-![](scrin/agr2.png)
+
+![](operation/agr2.png)
 
 Вывод количества абонементов и видов абонементов 
-![](scrin/agr3.png)
+
+![](operation/agr3.png)
 
 ### 7.2. РАНЖИРУЮЩИЕ ФУНКЦИИ
  Сортировка строк с одним столбцом, номер строк для нумерации.
 Вывод стоблцов таблицы, возвращение ранга стобца description, возвращение нумерации 
-![](scrin/ranzh.png)
+
+![](operation/ranzh.png)
 
 ### 7.3. ФУНКЦИИ СМЕЩЕНИЯ
  Перемещение строк относительно других
 Обращение к другим данным столбца description, общение к другим данным из следующих строк,
 возвращает первое значение в окне
-![](scrin/smesh.png)
+
+![](operation/smesh.png)
 
 
 
