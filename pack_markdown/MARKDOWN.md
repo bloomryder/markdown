@@ -107,7 +107,11 @@ HAVING avg_price > 15000
 ### 6. SELECT (Вложенный запрос)
  Вывод с вложенным запросом в WHERE 
 Вывод результата с именем "артем"
-
+```
+SELECT last_name, name FROM clients
+WHERE last_name = (SELECT last_name FROM clients
+                   WHERE name = 'Artem')
+```
 ![](operation/select1.png)
 
 Вывод номера телефона, где имя равно "василий"
