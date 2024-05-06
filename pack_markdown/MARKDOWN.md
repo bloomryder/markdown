@@ -163,7 +163,15 @@ FROM season_tickets
 ### 7.2. РАНЖИРУЮЩИЕ ФУНКЦИИ
  Сортировка строк с одним столбцом, номер строк для нумерации.
 Вывод стоблцов таблицы, возвращение ранга стобца description, возвращение нумерации 
-
+```
+SELECT id,
+	description,
+    price,
+    date_s,
+    RANK() OVER(PARTITION BY description ORDER BY price) AS 'rank',
+    ROW_NUMBER() OVER(PARTITION BY description ORDER BY price) AS 'row_number'
+FROM season_tickets
+```
 
 ![](operation/ranzh.png)
 
@@ -171,7 +179,16 @@ FROM season_tickets
  Перемещение строк относительно других
 Обращение к другим данным столбца description, общение к другим данным из следующих строк,
 возвращает первое значение в окне
-
+```
+SELECT id,
+	description,
+    price,
+    date_s,
+    LAG(price) OVER(PARTITION BY description ORDER BY price) AS 'lag',
+    LEAD(price) OVER(PARTITION BY description ORDER BY price) AS 'lead',
+    FIRST_VALUE(price) OVER(PARTITION BY description ORDER BY price) AS 'first_value'
+from season_tickets
+```
 
 ![](operation/smesh.png)
 
