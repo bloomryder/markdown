@@ -1,4 +1,4 @@
-# Шакирова Арина Васильевна, группа ИС22/9-1
+                               # Шакирова Арина Васильевна, группа ИС22/9-1
 
 ## 2. Описание БД
 База данных спортзала, включает в себя 5 таблиц:
@@ -72,15 +72,14 @@
 
 
 ![](operation/union.png)
-
-
+```
    SELECT last_name
-FROM clients
-UNION 
-SELECT last_name
-FROM coachs
-ORDER BY last_name
-
+   FROM clients
+   UNION 
+   SELECT last_name
+   FROM coachs
+   ORDER BY last_name
+```
 ### 4. ORDER BY
  Сортировка
 Упорядочение по столбцу last_name
