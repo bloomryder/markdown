@@ -95,6 +95,11 @@
  Фильтрация запросов
 Отфильтровал таблицу по avg_price 
 
+```SELECT name_of_season_tickets, AVG(price) as avg_price
+FROM season_tickets
+GROUP BY name_of_season_tickets
+HAVING avg_price > 15000
+```
 
 ![](operation/having.png)
 
