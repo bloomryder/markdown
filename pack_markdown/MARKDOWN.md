@@ -201,7 +201,6 @@ from season_tickets
 SELECT clients.last_name as Фамилия_клиента, clients.name as Имя_клиента,
 coachs.last_name as Фамилия_тренера, coachs.name as Имя_тренера,
 clients.phone_number as Номер_клиента, coachs.phone_number as Номер_тренера
-
 FROM clients
 JOIN coachs on clients.id_coach = coachs.id
 ```
@@ -223,7 +222,8 @@ JOIN gym_classes ON coachs.id = gym_classes.id
 inner - Вывод описания абонемента, цены, месяца действия, оплаты из таблицы учета
 (season_tickets, uchet)
 
-```SELECT season_tickets.description, season_tickets.price, uchet.month, uchet.payment
+```
+SELECT season_tickets.description, season_tickets.price, uchet.month, uchet.payment
 FROM season_tickets
 JOIN uchet ON season_tickets.id = uchet.id
 ```
@@ -254,12 +254,13 @@ LEFT JOIN coachs ON clients.id = coachs.id
 ### 9. CASE
  Работает как конструкция IF
 Сопоставление номера телефона тренера и если он меньше 12 знаков, то это редкий номер
-```SELECT phone_number as Номер_Тренера,
+```
+SELECT phone_number as Номер_Тренера,
 CASE
   WHEN length(phone_number) > 12 THEN 'Редкий_Номер_телефона'
   ELSE 'Обычный_Номер'
 END as Классификация_номера
-from coachs
+FROM coachs
   ```
 
 ![](operation/case.png)
