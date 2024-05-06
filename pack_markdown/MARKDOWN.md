@@ -166,6 +166,10 @@ inner - Вывод данных о тренерах и их спортзалы(�
 
 inner - Вывод описания абонемента, цены, месяца действия, оплаты из таблицы учета
 (season_tickets, uchet)
+```select season_tickets.description, season_tickets.price, uchet.month, uchet.payment
+from season_tickets
+join uchet on season_tickets.id = uchet.id
+```
 
 
 ![](operation/join3.png)
