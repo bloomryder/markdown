@@ -197,34 +197,56 @@ from season_tickets
   inner - Обьединяет таблицы (у меня через id)
 Вывод данных о тренерах и клиетах и их номера телефонов
 (coachs, clients)
- 
+ ```
+SELECT clients.last_name as Фамилия_клиента, clients.name as Имя_клиента,
+coachs.last_name as Фамилия_тренера, coachs.name as Имя_тренера,
+clients.phone_number as Номер_клиента, coachs.phone_number as Номер_тренера
 
+FROM clients
+JOIN coachs on clients.id_coach = coachs.id
+```
 ![](operation/join1.png)
 
 inner - Вывод данных о тренерах и их спортзалы(номера)
 (coachs, gym_classes)
-
+```
+SELECT coachs.last_name AS Фамилия_тренера,
+	coachs.name AS Имя_тренера,
+    gym_classes.number AS Номер_спортзала
+FROM coachs
+JOIN gym_classes ON coachs.id = gym_classes.id
+```
 
 ![](operation/join2.png)
 
 
 inner - Вывод описания абонемента, цены, месяца действия, оплаты из таблицы учета
 (season_tickets, uchet)
-```select season_tickets.description, season_tickets.price, uchet.month, uchet.payment
-from season_tickets
-join uchet on season_tickets.id = uchet.id
+
+```SELECT season_tickets.description, season_tickets.price, uchet.month, uchet.payment
+FROM season_tickets
+JOIN uchet ON season_tickets.id = uchet.id
 ```
 
 
 ![](operation/join3.png)
 
 right - Вывод имени, фамилии клиентов и фамилиии и номера телефона тренеров
+```
+SELECT clients.last_name, clients.name, coachs.last_name, coachs.phone_number
+FROM clients
+RIGHT JOIN coachs ON clients.id = coachs.id
+```
 
 
 ![](operation/rightjoin.png)
 
 left - Вывод имени, фамилии клиентов и фамилиии и номера телефона тренеров
-
+```
+SELECT clients.last_name, clients.name, coachs.last_name, coachs.phone_number
+FROM clients
+LEFT JOIN coachs ON clients.id = coachs.id
+```
 
 ![](operation/leftjoin.png)
 
