@@ -86,7 +86,11 @@
 
 
 ![](operation/orderby.png)
-
+```
+select last_name, name, phone_number
+from clients
+order by last_name
+```
 ### 5. HAVING 
  Фильтрация запросов
 Отфильтровал таблицу по avg_price 
