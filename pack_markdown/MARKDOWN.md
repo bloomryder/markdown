@@ -269,7 +269,14 @@ FROM coachs
 ### 9. WITH
  Создание временной таблицы 
 Таблица содержит имена тренеров и клиентов
-
+```
+WITH all_names AS 
+	(SELECT clients.name AS Имя_клиента, coachs.name AS Имя_тренера FROM clients
+     JOIN coachs
+     ON clients.id_coach = coachs.id)
+     
+SELECT * FROM all_names
+```
 ![](operation/with.png)
 
 
