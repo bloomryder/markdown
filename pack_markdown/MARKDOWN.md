@@ -107,35 +107,54 @@ HAVING avg_price > 15000
 ### 6. SELECT (Вложенный запрос)
  Вывод с вложенным запросом в WHERE 
 Вывод результата с именем "артем"
+```
 
 
 ![](operation/select1.png)
 
 Вывод номера телефона, где имя равно "василий"
-
+```
+SELECT last_name, name, phone_number FROM clients
+WHERE phone_number = (SELECT phone_number FROM clients
+                      WHERE name = 'Vasiliy')
+```
 
 ![](operation/select2.png)
 
 вывод цены > 15.000 с описанием абонемента
-
-
+```
+SELECT description, price, amount FROM season_tickets
+WHERE price = (SELECT price FROM season_tickets
+               WHERE price = 15000)
+```
 ![](operation/select3.png)
 
 ### 7.1. АГРЕГАТНЫЕ ФУНКЦИИ 
  Математические функции 
 
 Вывод максимальной цены из таблицы учета
-
+```
+SELECT month, MAX(payment) AS Максимальная_цена
+FROM uchet
+```
 
 ![](operation/agr1.png)
 
 Вывод самого длинного номера телефона и количество клиентов 
-
+```
+SELECT MAX(LENGTH(phone_number)) AS Самый_длинный_номер, 
+	COUNT(id) as Количество_клиентов
+FROM clients
+```
 
 ![](operation/agr2.png)
 
 Вывод количества абонементов и видов абонементов 
-
+```
+SELECT amount AS Количество_абонементов,
+COUNT(name_of_season_tickets) AS Количество_видов_абонеметов
+FROM season_tickets
+```
 
 ![](operation/agr3.png)
 
