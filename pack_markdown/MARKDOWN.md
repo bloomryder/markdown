@@ -168,8 +168,8 @@ SELECT id,
 	description,
     price,
     date_s,
-    RANK() OVER(PARTITION BY description ORDER BY price) AS 'rank',
-    ROW_NUMBER() OVER(PARTITION BY description ORDER BY price) AS 'row_number'
+    RANK() OVER(PARTITION BY price ORDER BY description) AS 'rank',
+    ROW_NUMBER() OVER(PARTITION BY price ORDER BY description) AS 'row_number'
 FROM season_tickets
 ```
 
